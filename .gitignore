@@ -12,18 +12,21 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
-wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/advanced-custom-fields-pro
+!wp-content/plugins/what-the-file
+!wp-content/plugins/svg-support
+
 wp-content/themes/*
 !wp-content/themes/client-base
 
-/.htaccess
+!.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
 .DS_Store
 *.DS_Store
-readme.html
 
 # ignore compiled files
 *.com
