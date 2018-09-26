@@ -1,4 +1,4 @@
-<div id="hamburger" class="hamburger is-closed hide-for-large">
+<div id="hamburger" class="hamburger is-closed hide-for-medium">
     <div class="burger-icon">
         <div class="burger-container">
             <span class="burger-bun-top"></span>

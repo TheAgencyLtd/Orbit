@@ -1,10 +1,10 @@
-var $mainMenu = document.getElementById('menu-main-menu'),
+var $mainMenu = document.getElementById('menu-main'),
     $hamburger = document.getElementById('hamburger'),
     $header = document.getElementById('masthead'),
     $up = document.getElementById('js-top');
 
     addEvent($hamburger, 'click', function(){
-
+        console.log($hamburger);
         toggleClass($hamburger, 'is-open');
         toggleClass($hamburger, 'is-closed');
         toggleClass($mainMenu, 'is-shown');
@@ -43,7 +43,7 @@ var $mainMenu = document.getElementById('menu-main-menu'),
 /**
  * Cookie handle section
  */
-
+/*
 var $acceptBtn = document.getElementById('js-accept'),
     $refuseBtn = document.getElementById('js-refuse'),
     $banner = document.getElementById('js-banner');
@@ -68,7 +68,7 @@ var setCookie = function(name, value, expire) {
     $banner.style.display = "none";
     location.reload();
 };
-
+*/
 /**
  * Hide error on form
  */
@@ -76,38 +76,4 @@ var $validForm = document.getElementsByClassName('invalid');
 if( $validForm.length > 0 ) { //if we can find invalid
     var $screenReader = document.querySelector('.screen-reader-response[role=alert]');
     $screenReader.style.display = 'none';
-}
-
-
-/*
-    Animate the number
-*/
-
-var $approach = document.getElementById('js-option'),
-    $squares = document.getElementsByClassName('rotated-square');
-
-if( $approach ) {
-
-    var approachOffset = offset($approach),
-        triggerTop = approachOffset.top - 500;
-
-    addEvent(window, 'scroll', function() {
-        var windowTopPos = window.scrollY;
-        if(windowTopPos >= triggerTop) {
-            for( var i = 0; i<$squares.length; i++ ){
-                removeClass($squares[i], 'fadedIn');
-            }
-        }
-    });
-    //console.log(approachOffset.top);
-}
-
-var $message = document.querySelector('.wpcf7-mail-sent-ok');
-
-if( $message ) {
-    gtag('event', 'submit', {
-        'event_category': 'Contact Form',
-        'event_label': 'Action',
-        'value': ''
-    });
 }

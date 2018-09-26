@@ -36,7 +36,7 @@
             </div>
             <div class="column small-11 medium-3 large-text-center bottom-15">
                 <a href="/">
-                    <img src="<?=IMG_PATH?>snc-logo.svg" alt="SIP" class="logo-image">
+                    <!-- <img src="<?=IMG_PATH?>snc-logo.svg" alt="SIP" class="logo-image"> -->
                 </a>
             </div>
             <div class="column small-11 medium-12 footer-links">

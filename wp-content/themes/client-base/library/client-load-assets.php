@@ -68,28 +68,24 @@ add_action('wp_enqueue_scripts', 'client_load_theme_files_no_jquery'); //if jque
  */
 function client_initialize_theme_detects() {
 ?>
-
     <?php
         if (!isset($_COOKIE['fullCSS']) || $_COOKIE['fullCSS'] !== 'true' ) {
     ?>
         <script>
             <?php include_once DIR_PATH.'assets/javascript/detect.js' ?>
-            var stylesheet = loadCSS('<?php echo THEME_PATH. "assets/stylesheets/foundation.css"; ?>');
-            <?php if( isset($_COOKIE['cookie_accept']) && $_COOKIE['cookie_accept'] == 'true' ) { ?>
-                /*onloadCSS( stylesheet, function() {
-                    var expires = new Date(+new Date + (7 * 24 * 60 * 60 * 1000)).toUTCString();
-                    document.cookie = 'fullCSS=true; expires=' + expires;
-                });*/
-            <?php
-                }
-            ?>
+        </script>
+        <script>
+            var stylesheet = loadCSS('<?php echo THEME_PATH. "assets/stylesheets/foundation.css?ver=1.1"; ?>');
+            onloadCSS( stylesheet, function() {
+                var expires = new Date(+new Date + (7 * 24 * 60 * 60 * 1000)).toUTCString();
+                document.cookie = 'fullCSS=true; expires=' + expires;
+            });
         </script>
         <style>
             <?php include_once DIR_PATH.'assets/stylesheets/critical.php' ?>
         </style>
-    <?php } ?>
-
-<?php
+    <?php
+        }
 }
 add_action('wp_head', 'client_initialize_theme_detects', 30);
 
@@ -116,7 +112,7 @@ function client_add_attribute_script_tags($tag, $handle) {
     if ('jquery' === $handle || 'foundation' === $handle){
         return str_replace( '<script ', '<script defer ', $tag );
     }elseif( 'google-recaptcha' == $handle ) {
-        return str_replace( '<script ', '<script async ', $tag );
+        return str_replace( '<script ', '<script defer ', $tag );
     }
     return $tag;
 }

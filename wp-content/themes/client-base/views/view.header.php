@@ -26,32 +26,18 @@
 
         <header class="main-header" id="masthead">
             <div class="row">
-                <div class="columns small-12 large-5">
-                    <!-- <div class="flex-container align-justify align-middle text-center"> -->
-                        <!-- <img class="logo-image" src="<?=IMG_PATH?>snc-logo.svg" alt="<?php echo  bloginfo('name'); ?>" />
-                        <img class="logo-atkins" src="<?=IMG_PATH?>atkins-logo.svg" alt="Atkins Logo">
-                        <img class="logo-faithful" src="<?=IMG_PATH?>faithful-logo.svg"  alt="faithful gould Logo"> -->
-
-                        <img class="logo-image" src="<?=IMG_PATH?>all-logos.svg" alt="<?php echo  bloginfo('name'); ?>" />
-
-                        <!-- <div class="logo-container / columns small-7 medium-4">
-                            <img class="logo-image" src="<?=IMG_PATH?>snc-logo.svg" alt="<?php echo  bloginfo('name'); ?>" />
-                        </div>
-                        <div class="columns small-6 medium-4">
-                            <img class="logo-atkins" src="<?=IMG_PATH?>atkins-logo.svg" alt="Atkins Logo">
-                        </div>
-                        <div class="columns small-6 medium-4">
-                            <img class="logo-faithful" src="<?=IMG_PATH?>faithful-logo.svg"  alt="faithful gould Logo">
-                        </div> -->
-                    <!-- </div> -->
+                <div class="columns small-12 medium-3 large-5">
+                    <a href="/">
+                        <img class="logo-image" src="<?=IMG_PATH?>orbit_logo.png" alt="<?php echo  bloginfo('name'); ?>" width="144" height="42" />
+                    </a>
                 </div>
-                <div class="columns small-12 large-7">
+                <div class="columns small-12 medium-9 large-7">
                     <nav class="column main-menu-container">
                         <?php include_once PARTIAL.'burger.php' ?>
                         <?php
                             wp_nav_menu(
                                 array(
-                                    'menu' => 'Main Menu',
+                                    'menu' => 'Main',
                                     'menu_class' => 'main-menu',
                                     'container' => false
                                 )
