@@ -1,0 +1,36 @@
+.btn {
+  display    : inline-block;
+  padding    : 0.5em 0.8em;
+  font-size  : 0.875rem;
+  font-weight: 700;
+  color      : $color-white;
+  border     : 1px solid $color-white;
+  cursor     : pointer;
+
+  &:hover {
+    color          : $color-white;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $color-white;
+  }
+
+  &:active {
+    transform: translateX(1px) translateY(1px);
+  }
+
+  &-blue {
+    color       : $color-title;
+    border-color: $color-title;
+
+    &:focus,
+    &:hover {
+      color: $color-title;
+    }
+  }
+
+  &-big {
+    padding: 1em 1.2em;
+  }
+}

@@ -1,0 +1,73 @@
+/*
+    OPTION SECTION ON HOMEPAGE
+ */
+.option {
+  position: relative;
+  @include breakpoint(medium down) {
+    &:not(:last-child) {
+      margin-bottom: 2.5em;
+    }
+  }
+
+  &-section {
+    margin-top: 3.5em;
+  }
+
+  &-content {
+    height : 100%;
+    padding: 5% 12%;
+  }
+
+  &-text {
+    font-size  : 0.94em;
+    font-weight: 300;
+  }
+
+  &-order {
+    position   : absolute;
+    top        : -23px;
+    right      : 0;
+    left       : 0;
+    z-index    : 1;
+    display    : block;
+    margin     : auto;
+    font-size  : 2em;
+    font-weight: 700;
+    color      : $color-white;
+  }
+
+  &-title {
+    margin-top   : 1.8em;
+    margin-bottom: 1.2em;
+  }
+
+  .rotated-square {
+    position    : absolute;
+    top         : -24px;
+    right       : 0;
+    left        : 0;
+    margin-left : auto;
+    margin-right: auto;
+  }
+}
+
+.rotated-square {
+  .option-1 & {
+    background-color: $color-predict;
+    transition      : all 0.5s ease;
+  }
+
+  .option-2 & {
+    background-color: $color-refine;
+    transition      : all 1.5s ease;
+  }
+
+  .option-3 & {
+    transition: all 2.5s ease;
+  }
+
+  .option-4 & {
+    background-color: $color-optimise;
+    transition      : all 3.5s ease;
+  }
+}

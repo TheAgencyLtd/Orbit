@@ -1,0 +1,212 @@
+// vars
+$hamburger-colour: $color-text; // icon color
+$hamburger-background: transparent; // background color
+$animation: 0.6s; // animation speed
+$scale: 40/68; // icon scale 68/68 default
+
+.hamburger {
+  transform            : translateY(-8px) scale($scale);
+  position             : relative;
+  z-index              : 4;
+  display              : block;
+  width                : 40px;
+  height               : 40px;
+  background           : $hamburger-background;
+  -webkit-touch-callout: none;
+  user-select          : none;
+  cursor               : pointer;
+}
+
+.burger-icon {
+  position: absolute;
+  padding : 20px;
+  height  : 68px;
+  width   : 68px;
+}
+
+.burger-container {
+  position: relative;
+  height  : 28px;
+  width   : 36px;
+}
+
+.burger-bun-bot,
+.burger-bun-top,
+.burger-filling {
+  position     : absolute;
+  display      : block;
+  height       : 4px;
+  width        : 36px;
+  border-radius: 2px;
+  background   : $hamburger-colour;
+
+  .is-open & {
+    background: $color-white;
+  }
+}
+
+.burger-bun-top {
+  top             : 0;
+  transform-origin: 34px 2px;
+}
+
+.burger-bun-bot {
+  bottom          : 0;
+  transform-origin: 34px 2px;
+}
+
+.burger-filling {
+  top: 12px;
+}
+
+.hamburger.is-open {
+  .burger-bun-top {
+    animation          : bun-top-out $animation linear normal;
+    animation-fill-mode: forwards;
+  }
+
+  .burger-bun-bot {
+    animation          : bun-bot-out $animation linear normal;
+    animation-fill-mode: forwards;
+  }
+}
+
+.hamburger.is-closed {
+  .burger-bun-top {
+    animation          : bun-top-in $animation linear normal;
+    animation-fill-mode: forwards;
+  }
+
+  .burger-bun-bot {
+    animation          : bun-bot-in $animation linear normal;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes bun-top-out {
+  0% {
+    left     : 0;
+    top      : 0;
+    transform: rotate(0deg);
+  }
+
+  20% {
+    left     : 0;
+    top      : 0;
+    transform: rotate(15deg);
+  }
+
+  100% {
+    left     : -5px;
+    top      : 1px;
+    transform: rotate(-45deg);
+  }
+}
+@keyframes bun-bot-out {
+  0% {
+    left     : 0;
+    transform: rotate(0deg);
+  }
+
+  20% {
+    left     : 0;
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    left     : -5px;
+    transform: rotate(45deg);
+  }
+}
+@keyframes bun-top-in {
+  0% {
+    left     : -5px;
+    bot      : 0;
+    transform: rotate(-45deg);
+  }
+
+  20% {
+    left     : -5px;
+    bot      : 0;
+    transform: rotate(-60deg);
+  }
+
+  100% {
+    left     : 0;
+    bot      : 1px;
+    transform: rotate(0deg);
+  }
+}
+@keyframes bun-bot-in {
+  0% {
+    left     : -5px;
+    transform: rotate(45deg);
+  }
+
+  20% {
+    left     : -5px;
+    bot      : 0;
+    transform: rotate(60deg);
+  }
+
+  100% {
+    left     : 0;
+    transform: rotate(0deg);
+  }
+}
+// burger filling
+
+.hamburger.is-open {
+  .burger-filling {
+    animation          : burger-fill-out $animation linear normal;
+    animation-fill-mode: forwards;
+  }
+}
+
+.hamburger.is-closed {
+  .burger-filling {
+    animation          : burger-fill-in $animation linear normal;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes burger-fill-in {
+  0% {
+    width: 0;
+    left : 36px;
+  }
+
+  40% {
+    width: 0;
+    left : 40px;
+  }
+
+  80% {
+    width: 36px;
+    left : -6px;
+  }
+
+  100% {
+    width: 36px;
+    left : 0;
+  }
+}
+@keyframes burger-fill-out {
+  0% {
+    width: 36px;
+    left : 0;
+  }
+
+  20% {
+    width: 42px;
+    left : -6px;
+  }
+
+  40% {
+    width: 0;
+    left : 40px;
+  }
+
+  100% {
+    width: 0;
+    left : 36px;
+  }
+}

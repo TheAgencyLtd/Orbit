@@ -1,0 +1,139 @@
+.bg {
+  &-grey {
+    background-color: $color-grey-bg;
+  }
+
+  &-blue {
+    background-color: $color-title;
+  }
+
+  &-white {
+    background-color: $color-white;
+  }
+}
+
+hr.bg-blue {
+  border-bottom-color: $color-title;
+}
+
+.color {
+  &-blue {
+    color: $color-title;
+  }
+}
+
+.bottom {
+  &-15 {
+    margin-bottom: 15px;
+  }
+}
+
+.rotated-square {
+  display         : inline-block;
+  width           : 50px;
+  height          : 50px;
+  border          : 3px solid $color-white;
+  border-radius   : 2px;
+  background-color: $color-title;
+  opacity         : 1;
+  transform       : rotate(45deg);
+
+  .js &.fadedIn {
+    opacity: 0;
+  }
+}
+
+.rotated-frame {
+  position  : absolute;
+  z-index   : 1;
+  left      : -33px;
+  top       : -33px;
+  display   : block;
+  width     : 216px;
+  height    : 216px;
+  background: transparent;
+  border    : 56px solid;
+  transform : rotate(45deg);
+
+  .bg-grey & {
+    border-color: $color-grey-bg;
+  }
+
+  &-container {
+    position: relative;
+    width   : 150px;
+    height  : 150px;
+    margin  : auto;
+    overflow: hidden;
+  }
+}
+
+ul {
+  margin: 0;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-style {
+  ul {
+    list-style-type: none;
+
+    li {
+      position     : relative;
+      padding-left : 2em;
+      margin-bottom: 0.5em;
+
+      &:before {
+        content : "›";
+        position: absolute;
+        top     : -1px;
+        left    : 0;
+        color   : $color-title;
+      }
+    }
+  }
+
+  .table {
+    margin-bottom: 1.5em;
+    @include breakpoint(medium down) {
+      tr:first-child {
+        display: none;
+      }
+    }
+
+    td {
+      padding       : 0.5em;
+      vertical-align: top;
+      @include breakpoint(medium down) {
+        display: block;
+
+        &:last-child {
+          border-bottom: 1px solid $color-text;
+        }
+      }
+      @include breakpoint(large) {
+        border-bottom: 1px solid $color-text;
+      }
+    }
+  }
+}
+
+.blur-up {
+  filter: blur(5px);
+  transition: filter 400ms;
+
+  &.lazyloaded {
+    filter: blur(0);
+  }
+}
+
+.responsive-embed {
+  padding-bottom: 56.25%;
+}
+
+iframe {
+  border      : none!important;
+  border-color: transparent!important;
+}

@@ -1,0 +1,38 @@
+.hero {
+  &-container {
+    position: relative;
+  }
+
+  &-content {
+    position: absolute;
+    top     : 20%;
+    left    : 2%;
+    width   : 90%;
+    margin  : auto;
+    @include breakpoint(large) {
+      width: 60%;
+    }
+    @include breakpoint(xlarge) {
+      top: 30%;
+    }
+  }
+
+  &-text {
+    margin-bottom: 0.8em;
+    font-size    : 1.3em;
+    color        : $color-white;
+    @include breakpoint(medium) {
+      font-size: 1.2em;
+    }
+    @include breakpoint(large) {
+      font-size  : 1.75em;
+      line-height: 1.25;
+    }
+  }
+
+  &-image {
+    @include breakpoint(medium down) {
+      min-height: 300px;
+    }
+  }
+}

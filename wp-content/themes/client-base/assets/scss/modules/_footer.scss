@@ -1,0 +1,82 @@
+/**/
+.footer-menu {
+  margin    : 0;
+  list-style: none;
+  @include breakpoint(medium) {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+  }
+
+  .menu-item {
+    margin-bottom: 0.5em;
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+    @include breakpoint(large) {
+      width: 30%;
+    }
+
+    &:hover a {
+      text-decoration: underline;
+    }
+
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  &-link {
+    display     : block;
+    padding     : 0.6em;
+    margin-right: 0.5em;
+    border      : 1px solid $color-title;
+    transition  : all 0.1s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  &-icon {
+    max-width : 30px;
+    max-height: 30px;
+  }
+}
+
+.footer-links a:not(:last-child)::after {
+  content    : "|";
+  margin-left: 0.3em;
+}
+
+.up {
+  position  : fixed;
+  bottom    : 10%;
+  right     : 1%;
+  z-index   : 3;
+  max-width : 50px;
+  max-height: 50px;
+  opacity   : 0;
+  cursor    : pointer;
+  transition: opacity 0.8s ease;
+
+  &.shown {
+    opacity: 0.7;
+  }
+}
+
+.cookie-banner {
+  position        : fixed;
+  left            : 0;
+  bottom          : 0;
+  z-index         : 1;
+  width           : 100%;
+  padding         : 0.5em;
+  font-size       : 0.85em;
+  color           : $color-white;
+  background-color: $color-text;
+}
