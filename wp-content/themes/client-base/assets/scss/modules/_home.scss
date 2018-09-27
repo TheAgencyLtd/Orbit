@@ -1,0 +1,44 @@
+.sand-section {
+  padding-bottom     : 1.3em;
+  background-image   : url("../images/sand-small.png");
+  background-repeat  : no-repeat;
+  background-position: center bottom;
+  background-size    : 100%;
+  @include breakpoint(medium) {
+    padding-bottom: 2.1em;
+  }
+  @include breakpoint(large) {
+    padding-bottom  : 3.8em;
+    background-image: url("../images/sand-big.png");
+  }
+  @include breakpoint(xlarge) {
+    padding-bottom: 4.4em;
+  }
+}
+//discover more section
+
+.discover {
+  position     : relative;
+  z-index      : 2;
+  font-size    : 1.2em;
+  margin-bottom: 2em;
+  @include breakpoint(medium) {
+    padding-bottom: 1.7em;
+    margin-bottom : 0;
+
+    &-cta {
+      position: absolute;
+      left    : 0;
+      right   : 0;
+      bottom  : 0;
+      margin  : auto;
+    }
+  }
+}
+
+.oyster {
+  position: absolute;
+  z-index : 1;
+  right   : -41px;
+  bottom  : -169px;
+}

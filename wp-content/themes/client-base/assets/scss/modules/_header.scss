@@ -1,11 +1,16 @@
 .main-header {
   border-top    : 7px solid $color-heading;
   padding-top   : 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.4em;
 }
 
 .logo-container {
   @include breakpoint(small only) {
     margin-bottom: 1em;
   }
+}
+
+.logo-image {
+  max-width : 144px;
+  max-height: 42px;
 }

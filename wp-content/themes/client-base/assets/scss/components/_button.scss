@@ -1,15 +1,16 @@
 .btn {
-  display    : inline-block;
-  padding    : 0.5em 0.8em;
-  font-size  : 0.875rem;
-  font-weight: 700;
-  color      : $color-white;
-  border     : 1px solid $color-white;
-  cursor     : pointer;
+  display      : inline-block;
+  padding      : 0.2em 1.1em;
+  font-size    : 0.875rem;
+  font-weight  : 400;
+  color        : $color-cta;
+  border       : 1px solid $color-cta;
+  border-radius: 5px;
+  cursor       : pointer;
 
   &:hover {
-    color          : $color-white;
-    text-decoration: underline;
+    color           : $color-white;
+    background-color: $color-cta;
   }
 
   &:focus {
@@ -20,17 +21,20 @@
     transform: translateX(1px) translateY(1px);
   }
 
-  &-blue {
-    color       : $color-title;
-    border-color: $color-title;
+  &-hero {
+    padding     : 0.4em 1.4em;
+    font-size   : 1rem;
+    font-weight : 700;
+    color       : $color-white;
+    border-color: $color-white;
 
-    &:focus,
     &:hover {
-      color: $color-title;
+      color           : $color-cta;
+      background-color: $color-white;
     }
-  }
 
-  &-big {
-    padding: 1em 1.2em;
+    &:focus {
+      color: $color-cta;
+    }
   }
 }

@@ -7,34 +7,6 @@
   padding-top   : 3em;
   padding-bottom: 3em;
 }
-/*
-    INTRO SECTION ON HOMEPAGE
- */
-.intro {
-  &-content {
-    margin-bottom: 1em;
-    font-size    : 1em;
-    @include breakpoint(medium) {
-      font-size: 1.2em;
-    }
-  }
-}
-/*
-    APPROACH SECTION ON HOMEPAGE
- */
-.approach-section {
-  // background-image : url("#{$path}city-medium.jpg");
-  // background-position: center;
-  background-color: #f5f7f9;
-  @include breakpoint(medium) {
-    //background-image: url("#{$path}city-medium.jpg");
-  }
-  @include breakpoint(large) {
-    background-image : url("#{$path}city-large.jpg");
-    background-repeat: none;
-    background-size  : cover;
-  }
-}
 
 .content-column {
   justify-content: center;

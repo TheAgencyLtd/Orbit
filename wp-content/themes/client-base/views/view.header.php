@@ -13,9 +13,9 @@
     <?php wp_head(); ?>
     <?php the_field('header_scripts', 'options') ?>
     <?php
-        if( isset($_COOKIE['cookie_accept']) && $_COOKIE['cookie_accept'] === 'true' ){
+        //if( isset($_COOKIE['cookie_accept']) && $_COOKIE['cookie_accept'] === 'true' ){
             the_field('google_analytics', 'options');
-        }
+        //}
     ?>
 </head>
 
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="columns small-12 medium-3 large-5">
                     <a href="/">
-                        <img class="logo-image" src="<?=IMG_PATH?>orbit_logo.png" alt="<?php echo  bloginfo('name'); ?>" width="144" height="42" />
+                        <img class="logo-image" src="<?=IMG_PATH?>orbit-logo.svg" alt="<?php echo  bloginfo('name'); ?>" />
                     </a>
                 </div>
                 <div class="columns small-12 medium-9 large-7">

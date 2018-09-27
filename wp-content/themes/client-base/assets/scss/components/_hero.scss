@@ -4,35 +4,48 @@
   }
 
   &-content {
-    position: absolute;
-    top     : 20%;
-    left    : 2%;
-    width   : 90%;
-    margin  : auto;
-    @include breakpoint(large) {
-      width: 60%;
-    }
-    @include breakpoint(xlarge) {
-      top: 30%;
-    }
+    position       : absolute;
+    width          : 100%;
+    height         : 100%;
+    top            : 0;
+    left           : 0;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    text-align     : center;
   }
 
   &-text {
+    padding-left : 2%;
+    padding-right: 2%;
     margin-bottom: 0.8em;
     font-size    : 1.3em;
     color        : $color-white;
-    @include breakpoint(medium) {
-      font-size: 1.2em;
-    }
+    @include breakpoint(medium) {}
     @include breakpoint(large) {
-      font-size  : 1.75em;
-      line-height: 1.25;
+      max-width: 44rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      line-height: 1.1;
+      color      : $color-white;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    p {
+      font-weight: 700;
     }
   }
 
   &-image {
     @include breakpoint(medium down) {
-      min-height: 300px;
+      min-height: 320px;
     }
   }
 }

@@ -71,15 +71,16 @@
 */
 // Global
 @import "global/variables";
-@import "global/typography"; //@import "modules/navigation";
+@import "global/typography";
 @import "global/general";
 @import "components/hamburger";
 @import "modules/header";
-@import "modules/navigation"; //@import "components/hero";
-@import "modules/page-section"; //@import "modules/approach";
-//@import "modules/single";
-//@import "modules/footer"; //
-//@import "components/button"; //@import "modules/sidebar";
+@import "modules/navigation";
+@import "components/hero";
+@import "modules/page-section";
+@import "modules/home"; //@import "modules/single";
+@import "modules/footer"; //
+@import "components/button"; //@import "modules/sidebar";
 @import "global/foundation-default"; //Other Plugins
 @import "vendors/svg-support";
 @import "vendors/contact-form";

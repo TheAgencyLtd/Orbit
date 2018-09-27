@@ -1,4 +1,17 @@
 /**/
+.main-footer {
+  color: $color-white;
+
+  a {
+    color: inherit;
+  }
+}
+
+.mayden-logo {
+  max-width : 170px;
+  max-height: 43px;
+}
+
 .footer-menu {
   margin    : 0;
   list-style: none;
@@ -6,23 +19,20 @@
     display        : flex;
     justify-content: space-between;
     flex-wrap      : wrap;
+    text-align     : right;
   }
 
   .menu-item {
     margin-bottom: 0.5em;
-    @include breakpoint(medium) {
-      width: 50%;
-    }
-    @include breakpoint(large) {
-      width: 30%;
-    }
 
     &:hover a {
       text-decoration: underline;
     }
 
     a {
-      font-weight: 700;
+      font-weight   : 400;
+      font-size     : 0.9em;
+      text-transform: uppercase;
     }
   }
 }
@@ -34,7 +44,7 @@
     display     : block;
     padding     : 0.6em;
     margin-right: 0.5em;
-    border      : 1px solid $color-title;
+    border      : 1px solid $color-white;
     transition  : all 0.1s ease;
 
     &:hover {
@@ -58,8 +68,8 @@
   bottom    : 10%;
   right     : 1%;
   z-index   : 3;
-  max-width : 50px;
-  max-height: 50px;
+  max-width : 40px;
+  max-height: 40px;
   opacity   : 0;
   cursor    : pointer;
   transition: opacity 0.8s ease;

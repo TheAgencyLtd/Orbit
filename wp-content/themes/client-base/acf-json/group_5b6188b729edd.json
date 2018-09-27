@@ -1,44 +1,7 @@
 {
     "key": "group_5b6188b729edd",
     "title": "Business Options",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "business-options"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1537961182,
     "fields": [
-        {
-            "key": "field_5b6188bd6b683",
-            "label": "Footer Claim",
-            "name": "footer_claim",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
         {
             "key": "field_5b6188dea72af",
             "label": "Footer Links",
@@ -137,11 +100,11 @@
             ]
         },
         {
-            "key": "field_5b6430dc32da4",
-            "label": "Form",
-            "name": "form",
-            "type": "wysiwyg",
-            "instructions": "",
+            "key": "field_5babaa03b2409",
+            "label": "CTA Default Text",
+            "name": "cta_default_text",
+            "type": "text",
+            "instructions": "Default text for all buttons over the site, default to \"Find out more\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -149,11 +112,29 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "default_value": "Find out more",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
-    ]
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "business-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1537976888
 }

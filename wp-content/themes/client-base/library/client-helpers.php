@@ -150,6 +150,13 @@ function addParaToIframe($iframe) {
     return $iframe;
 }
 
+function generateCTA($cta, $class="btn") {
+    if ( isset($cta['url']) && !empty($cta['url']) ) { ?>
+        <a href="<?=$cta['url']?>" class="<?=$class?>" target="<?=$cta['target']?>"><?=($cta['title']) ? $cta['title']: 'Find out more' ?></a>
+    <?php
+    }
+}
+
 /**
  * Function to debug
  * @param  [type]  $x    [variables to debug]
