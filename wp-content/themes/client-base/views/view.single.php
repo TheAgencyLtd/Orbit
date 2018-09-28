@@ -30,7 +30,6 @@
                                 </a>
                             </header>
                             <h5 class="color-blue"><a href="<?=$post->link?>"><?=$post->post_title?></a></h5>
-                            <p><a class="btn btn-blue" href="<?=$post->link?>">More</a></p>
                         </article>
                     <?php } //end foreach ?>
                 </div>

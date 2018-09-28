@@ -9,9 +9,8 @@
 @include foundation-typography; //
 @import "global/variables";
 @import "global/typography"; //@import "modules/navigation";
-@import "global/general";
+//@import "global/general";
 @import "components/hamburger";
 @import "modules/header";
 @import "modules/navigation";
-@import "components/hero";
-@import "modules/page-section";
+@import "components/hero"; //@import "modules/page-section";

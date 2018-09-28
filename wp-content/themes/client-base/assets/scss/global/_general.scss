@@ -36,26 +36,30 @@ ul {
 .relative {
   position: relative;
 }
-/*
+
+img.rounded {
+  border-radius: 50%;
+}
+
 .text-style {
   ul {
     list-style-type: none;
 
     li {
       position     : relative;
-      padding-left : 2em;
+      padding-left : 1em;
       margin-bottom: 0.5em;
 
       &:before {
-        content : "›";
+        content : "\2022";
         position: absolute;
         top     : -1px;
         left    : 0;
-        color   : $color-title;
+        color   : $color-cta;
       }
     }
   }
-
+  /*
   .table {
     margin-bottom: 1.5em;
     @include breakpoint(medium down) {
@@ -79,8 +83,9 @@ ul {
       }
     }
   }
+ */
 }
-*/
+
 .blur-up {
   filter: blur(5px);
   transition: filter 400ms;

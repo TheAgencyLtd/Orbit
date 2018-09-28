@@ -36,14 +36,14 @@
     }
   }
 }
-
+/*
 .social {
   display: flex;
 
   &-link {
     display     : block;
-    padding     : 0.6em;
-    margin-right: 0.5em;
+    padding     : 0.4em;
+    margin-right: 0.3em;
     border      : 1px solid $color-white;
     transition  : all 0.1s ease;
 
@@ -53,11 +53,11 @@
   }
 
   &-icon {
-    max-width : 30px;
-    max-height: 30px;
+    max-width : 20px;
+    max-height: 20px;
   }
 }
-
+*/
 .footer-links a:not(:last-child)::after {
   content    : "|";
   margin-left: 0.3em;

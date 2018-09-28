@@ -17,10 +17,9 @@
 // add_image_size( 'featured-xlarge', 1920, 400, true );
 
 // Add additional image sizes
-//add_image_size('casestudy', 500, 270, true);
+add_image_size('fp-blog', 370, 250, true);
 add_image_size('fp-tiny', 50);
 add_image_size('fp-xsmall', 500);
-add_image_size( 'fp-small', 640 );
 add_image_size( 'fp-medium', 1024 );
 add_image_size( 'fp-large', 1200 );
 add_image_size( 'fp-xlarge', 1920 );

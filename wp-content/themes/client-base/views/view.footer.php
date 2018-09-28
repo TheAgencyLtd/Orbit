@@ -18,20 +18,7 @@
                 <div class="text-right">
                     <small>Copyright &#169; <?=date('Y')?> All rights reserved</small>
                 </div>
-
             </div>
-            <?php $accounts = get_field('social_networks', 'options'); ?>
-            <?php if ($accounts): ?>
-                <div class="column small-11 medium-5 large-3 bottom-15">
-                <div class="social">
-                        <?php foreach ($accounts as $acc) { ?>
-                            <a href="<?=$acc['link_to_account']?>" target="_blank" class="social-link">
-                                <img class="lazyload social-icon"  data-src="<?=$acc['logo']['url']?>" alt="Social networks">
-                            </a>
-                        <?php } ?>
-                    </div>
-                </div>
-            <?php endif; ?>
         </div>
         <!-- </div> -->
     </footer>

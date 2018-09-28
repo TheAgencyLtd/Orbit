@@ -17,8 +17,10 @@
         </picture>
         <div class="hero-content">
             <div class="hero-text">
-                <?php if ( isset($hero['text']) ){ ?>
+                <?php if ( isset($hero['text']) && $hero['text'] != '' ){ ?>
                     <?=$hero['text']?>
+                <?php } else { ?>
+                    <h1><?=$page->post_title?></h1>
                 <?php } ?>
                 <?php generateCTA($hero['cta'], 'btn btn-hero top-15') ?>
             </div>
