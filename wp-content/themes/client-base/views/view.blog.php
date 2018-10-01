@@ -2,10 +2,21 @@
 <?php include PARTIAL. 'hero.php' ?>
 <?php include PARTIAL.'intro.php' ?>
 
+<?php if (is_archive()) { ?>
+    <section class="page-section">
+        <div class="row">
+            <h1 class="columns small-12">Blog</h1>
+        </div>
+    </section>
+<?php }//end if is_archive ?>
+
 <!--blog section -->
-<section class="page-section" id="blog-section">
+<section class="" id="blog-section">
+    <!-- category list section -->
+    <?php include PARTIAL.'category-list.php' ?>
+    <!-- blog list section -->
     <?php if ($articles['has_posts']) { ?>
-        <div class="row blog-list">
+        <div class="row blog-list align-center">
             <?php foreach ($articles['results'] as $article){ ?>
                 <article class="blog columns small-11 medium-6 large-4 bottom-15 text-center">
                     <header class="blog-header bottom-15">

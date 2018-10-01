@@ -17,5 +17,15 @@
     $data['articles'] = queryPosts($args, $paginated);
     $data['pagination'] = paginate();
 
+    $categories = get_categories(array(
+        'hide_empty' => false,
+        'orderby'    => 'term_order',
+        'order'      => 'ASC'
+    ));
+
+    $data['categories'] = $categories;
+
+    $data['cat'][] = 'all'; //the default category
+
     render('blog', $data);
 ?>

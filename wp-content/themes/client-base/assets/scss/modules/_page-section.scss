@@ -105,3 +105,9 @@
     }
   }
 }
+
+.blog-list {
+  @include breakpoint(medium) {
+    justify-content: flex-start;
+  }
+}

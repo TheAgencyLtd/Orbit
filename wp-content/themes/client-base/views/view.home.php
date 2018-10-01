@@ -38,7 +38,7 @@
                     <header>
                         <?php if (isset($item['icon'])){ ?>
                             <?php $sizes = $item['icon']['sizes'] ?>
-                            <img class="lazyload" data-src="<?=$sizes['fp-small']?>" alt="<?=$item['title']?>" width="<?=$sizes['fp-small-width']?>">
+                            <img class="lazyload" data-src="<?=$sizes['fp-xsmall']?>" alt="<?=$item['title']?>" width="<?=$sizes['fp-xsmall-width']?>">
                         <?php } //end if isset $item['icon']?>
                     </header>
 

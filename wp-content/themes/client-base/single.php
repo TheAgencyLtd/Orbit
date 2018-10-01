@@ -25,6 +25,27 @@ $data['related'] = queryPosts($args);
 
 $pageView = get_template_directory().'/views/view.'.$pageName.'.php';
 
+//get list of categories
+$categories = get_categories(array(
+    'hide_empty' => false,
+    'orderby'    => 'term_order',
+    'order'      => 'ASC'
+));
+
+$data['categories'] = $categories;
+
+//get post categories
+$postCategories = get_the_category($post->ID);
+
+if( $postCategories ) {
+    foreach ($postCategories as $postCategory) {
+        $data['cat'][] = $postCategory->slug;
+    }
+}else {
+    $data['cat'] = 'all'; //the default category
+}
+
+
 // check if the page has it's own view
 if (is_readable($pageView)) {
     // use page view
