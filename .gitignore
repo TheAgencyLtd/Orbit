@@ -11,6 +11,7 @@ wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/*
+wp-content/uploads/2018
 !wp-content/uploads/2018/09
 !wp-content/uploads/2018/10
 wp-content/mu-plugins/
