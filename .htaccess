@@ -75,7 +75,7 @@ AddType image/svg+xml svg svgz
 <IfModule mod_headers.c>
     Header set Connection keep-alive
     <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf|css|webp|svg|woff|woff2)$">
-        Header set Cache-Control "max-age=1209600, public"
+        Header set Cache-Control "stale-while-revalidate=2419200, max-age=1209600, public"
     </filesMatch>
 </IfModule>
 
