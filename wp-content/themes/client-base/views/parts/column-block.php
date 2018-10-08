@@ -24,7 +24,7 @@
         <section class="page-section content-block <?=$bg?> section-<?=$key?> <?=$template?>">
             <article class="block">
                 <header class="columns bottom-15 text-center">
-                    <h3><?=$block['title']?></strong></h3>
+                    <h3 id="<?=slugify($block['title'])?>"><?=$block['title']?></strong></h3>
                     <br>
                 </header>
                 <div class="row align-center <?=$type?>">
