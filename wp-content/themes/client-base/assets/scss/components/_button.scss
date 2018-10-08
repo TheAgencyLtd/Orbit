@@ -10,13 +10,19 @@
 
   &:hover {
     color           : $color-white;
+    //text-decoration: underline;
     background-color: $color-cta;
   }
 
   &:focus {
-    color: $color-white;
+    color           : $color-cta;
+    border          : 1px solid $color-cta;
+    background-color: transparent;
   }
-
+  //
+  // &:focus:hover {
+  //   color: $color-cta;
+  // }
   &:active {
     transform: translateX(1px) translateY(1px);
   }
