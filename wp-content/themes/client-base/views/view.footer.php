@@ -3,7 +3,7 @@
 	<footer class="main-footer page-section bg-footer" role="contentinfo" id="footer-container">
         <div class="row align-center align-top ">
             <div class="columns small-11 medium-3 large-2 bottom-15">
-                <img class="lazyload mayden-logo" data-src="<?=IMG_PATH?>mayden-logo.svg" alt="Mayden Logo">
+                <a href="https://mayden.co.uk" target="_blank"><img class="lazyload mayden-logo" data-src="<?=IMG_PATH?>mayden-logo.svg" alt="Mayden Logo"></a>
             </div>
             <div class="column small-11 medium-9 large-8 large-offset-2 bottom-15">
                 <?php
