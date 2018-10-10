@@ -24,6 +24,8 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/client-base
 
+/.idea
+
 !.htaccess
 /license.txt
 /readme.html
