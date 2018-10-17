@@ -236,3 +236,21 @@ function slugify($text)
 
     return $text;
 }
+
+/**
+ * Adds intro class to the first paragraph of a single blog post
+ * otherwise returns the p tag unchanged
+ *
+ * @param $content
+ * @return mixed
+ */
+function mayden_first_paragraph($content)
+{
+    if (is_single() && 'post' === get_post_type()) {
+        return preg_replace('/<p([^>]+)?>/', '<p$1 class="intro">', $content, 1);
+    } else {
+        return preg_replace('/<p([^>]+)?>/', '<p$1>', $content, 1);
+    }
+}
+
+add_filter('the_content', 'mayden_first_paragraph');
