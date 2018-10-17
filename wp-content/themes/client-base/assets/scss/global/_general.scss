@@ -106,3 +106,12 @@ iframe {
   border      : none!important;
   border-color: transparent!important;
 }
+
+/* Contact form */
+span.wpcf7-list-item {
+    margin: 0 !important;
+}
+
+.wpcf7-submit {
+  background-color: transparent
+}

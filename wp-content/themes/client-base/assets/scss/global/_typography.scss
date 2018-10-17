@@ -65,6 +65,10 @@ h5 {
   color         : $color-heading;
 }
 
+h3 {
+    line-height: 1.2 !important;
+}
+
 h6 {
   color      : $color-heading;
   font-weight: 700;
@@ -81,4 +85,8 @@ strong {
 
 .light-text {
   font-weight: 300;
+}
+
+address {
+    font-style: normal;
 }

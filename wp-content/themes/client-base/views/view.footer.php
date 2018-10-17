@@ -15,12 +15,13 @@
                         )
                     );
                 ?>
-                <div class="text-right">
-                    <small>Copyright &#169; <?=date('Y')?> All rights reserved</small>
-                </div>
             </div>
         </div>
-        <!-- </div> -->
+				<div class="row">
+					<div id="copyright-wrapper" class="column text-right">
+							<small>Copyright &#169; <?=date('Y')?> Mayden<sup>&reg;</sup> All rights reserved</small>
+					</div>
+				</div>
     </footer>
 </section><!-- id="page" class="main-container" -->
 <img src="<?=IMG_PATH?>up.svg" alt="Up" class="up" id="js-top">
