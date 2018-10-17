@@ -15,6 +15,7 @@
                     <?php include PARTIAL.'category-list.php' ?>
                 </header>
                 <div class="text-style">
+                  <div class="entry-date">Posted on: <?=esc_attr(get_the_date());?></div>
                     <?=$post->post_content?>
                 </div>
             </article>
