@@ -254,3 +254,20 @@ function mayden_first_paragraph($content)
 }
 
 add_filter('the_content', 'mayden_first_paragraph');
+
+
+/**
+ * This tells Contact Form 7 to run the ga() (Google Analytics tracker)
+ * function when a form submission completes and mail has been sent successfully.
+ */
+function mycustom_wp_footer() {
+    ?>
+    <script type="text/javascript">
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            ga( 'send', 'event', 'Contact Form', 'submit' );
+        }, false );
+    </script>
+    <?php
+}
+
+add_action( 'wp_footer', 'mycustom_wp_footer' );
